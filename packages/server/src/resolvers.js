@@ -8,7 +8,7 @@ export const resolvers = {
       });
     },
     meal: async (parent, args) => {
-      return await Meal.findByPk(args.id);
+      return await Meal.findByPk(args.id, { include: Category });
     },
   },
 };
